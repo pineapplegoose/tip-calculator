@@ -204,6 +204,7 @@ body{
         width: inherit;
         margin-top: 40px;
         padding: 10px;
+        height:fit-content;
     }
     .container .calculator .tip{
         width: inherit;
@@ -228,6 +229,7 @@ body{
     .calculator button{
         width: 70%;
         position: relative;
+  
     }
     .container .bill{
         width: 100%;
