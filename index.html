@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="tip.css">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tip Calculator</title>
+    <link rel="icon" href="favicon-32x32.png">
+</head>
+<body>
+    <div class="maincon">
+        <img class="logo" src="logo.svg" alt="logo">
+        <div class="container">
+            <div class="bill">
+                <div class="headingcontainer">
+                    <h4>Bill</h4>
+                    <i id="errormessage" class="error">Please enter proper input</i>
+                </div>
+                <span class="con billl">
+                    <img class="" src="icon-dollar.svg">
+                    <input id="billinput" type="text" oninput="Calculate()" placeholder="0.00" step="0.01" inputmode="decimal" class="input" pattern="[0-9]*[.,]?[0-9]*">
+                </span>
+                <div>
+                    <h4>Select Tip %</h4>
+                    <div class="tipbuttoncontainer">
+                        <button class="tipbutton" value="5">5%</button>
+                        <button class="tipbutton" value="10">10%</button>
+                        <button class="tipbutton" value="15">15%</button>
+                        <button class="tipbutton" value="25">25%</button>
+                        <button class="tipbutton" value="50">50%</button>
+                        <input type="text" id="tipcustom"  placeholder="Custom  " onkeyup="Calculate()">
+                    </div>
+                </div>
+                <div class="headingcontainer">
+                    <h4>Number of People</h4>
+                    <i id="errormessage2" class="error">Please enter proper input</i>
+                </div>
+                <span class="con number-people">
+                    <img class="" src="icon-person.svg">
+                    <input id="billperson" type="text" placeholder="0" class="input" oninput="Calculate()">
+                </span>
+            </div>
+            <div class="calculator">
+                <div class="tip">
+                    <span class="tip-text">
+                        <h5>Tip Amount</h5>
+                        <h6>/ person</h6>
+                    </span>
+                    <span class="tip-percent">
+                        <h1 id="tipamount" >$0.00</h1>
+                    </span>
+                </div>
+                <div class="tip">
+                    <span class="tip-text">
+                        <h5>Total</h5>
+                        <h6>/ person</h6>
+                    </span>
+                    <span class="tip-percent" >
+                        <h1 id="billamount">$0.00</h1>
+                    </span>
+                </div>
+                <button type="reset" class="resetbutton" id="reset" onclick="Res()">RESET</button>
+
+
+            </div>
+        </div>
+    </div>
+
+    <script src="tip.js"></script>
+</body>
+</html>

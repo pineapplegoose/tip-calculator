@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+body{
+    background-color:  hsl(185, 41%, 84%);
+    font-family: 'Space Mono', monospace;
+    align-content: center;
+    align-items: center;
+}
+.maincon{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+
+}
+.logo{
+    margin: auto;
+    margin-top: 70px;
+}
+.container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: white;
+    width: fit-content;
+    margin: 8% auto;
+    border-radius: 20px;
+    padding: 10px;
+    padding-right: 40px;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.445);
+
+}
+.container .calculator{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: hsl(183, 100%, 15%);
+    width: fit-content;
+    height: 340px;
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 1;
+    position: relative;
+}
+.container .calculator .tip{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 30vw;
+    height: fit-content;
+    margin: 0px;
+    padding:0px;
+    align-items: center;
+}
+.container .calculator .tip .tip-text{
+    color: hsl(189, 41%, 97%);
+}
+.container .calculator .tip .tip-text h6{
+    margin: 5px;
+    color: hsl(186, 14%, 43%);
+}
+.container .calculator .tip .tip-text h5{
+    margin: 5px;
+}
+.container .calculator .tip .tip-percent{
+    font-size: 20px;
+    font-weight: 700;
+    color: hsl(172, 67%, 45%);
+}
+.calculator button{
+    width: 80%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: 700;
+    color: hsl(183, 100%, 15%);
+    background-color: hsla(172, 67%, 45%, 0.301);
+    position: absolute;
+    bottom: 30px;
+}
+.calculator button:focus{
+    outline: none;
+    cursor: pointer;
+}
+.calculator button:hover{
+    background-color: hsl(185, 41%, 84%);
+    cursor: pointer;
+}
+.container .bill{
+    width: fit-content;
+    height: fit-content;
+    padding: 20px;
+    margin: 20px;
+    margin-right: 40px;
+}
+.bill h4{
+    font-weight: 600;
+    color:  hsl(186, 14%, 43%);
+}
+.bill input{
+    width: 70%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: end;
+    font-family: 'Space Mono', monospace;
+    color: hsl(183, 100%, 15%);
+    align-self: flex-end;
+}
+.input.active:focus,.input.active{
+    border: red solid 1px;
+}
+.bill input:focus{
+    outline: none;
+    border: hsl(172, 67%, 45%) solid 1px;
+}
+.headingcontainer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.error{
+    display: none;
+    color: red;
+    font-size: 12px;
+    font-weight: 300;
+    align-self: flex-end;
+}
+.bill .tipbuttoncontainer{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: space-between;
+}
+.bill button, .tipbutton,#tipcustom{
+    width: 8vw;
+    padding: 5px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 700;
+    background-color: hsl(183, 100%, 15%);
+    color: white;
+    font-family: 'Space Mono', monospace;
+}
+.bill #tipcustom{
+    background-color: transparent;
+    color: hsl(183, 100%, 15%);
+}
+#tipcustom:focus{
+    outline: none;
+    border: hsl(172, 67%, 45%) solid 1px;
+}
+.tipbutton.active{
+    outline: none;
+    cursor: pointer;
+    background-color: hsl(172, 67%, 45%);
+    color: hsl(183, 100%, 15%);
+}
+
+.bill button:hover{
+    background-color:hsl(185, 41%, 84%);
+    color: hsl(183, 100%, 15%);
+    cursor: pointer;
+    bottom: 0px;
+}
+.con {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0px;
+    padding:0px;
+    align-items: center;
+}
+
+@media screen and ( max-width: 768px){
+    body, html {
+        height: 100vh;
+        width: 100vw;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+    }
+    maincon{      
+        width: inherit;
+        margin: 0px;
+        padding: 0px;
+    }
+    .container{
+        flex-direction: column;
+        width: 90%;
+        margin: 0px;
+        margin-top: 20px;
+        padding: 30px;
+        box-shadow: none;
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+    }
+    .container .calculator{
+        width: inherit;
+        margin-top: 40px;
+        padding: 10px;
+    }
+    .container .calculator .tip{
+        width: inherit;
+        margin: auto;
+        padding: 20px;
+        border-end-start-radius: 0px;
+    }
+    .container .calculator .tip .tip-text{
+        width: 100%;
+        margin: 0px;
+        padding: 0px;
+        border-radius: 0px;
+    }
+    .container .calculator .tip .tip-percent{
+        width: 100%;
+        margin: 0px;
+        padding: 0px;
+        align-self: flex-end;
+        border-radius: 0px;
+        text-align: end;
+    }
+    .calculator button{
+        width: 70%;
+        position: relative;
+    }
+    .container .bill{
+        width: 100%;
+        margin: 0px;
+        padding: 0px;
+        border-radius: 0px;
+    }
+    .bill .tipbuttoncontainer{
+        grid-template-columns: auto auto;
+    }
+    .bill button{
+        width: 30vw;
+        padding: 8px;
+        border: none;
+        border-radius: 5px;
+        font-size: 18px;
+        font-weight: 700;
+        background-color: hsl(183, 100%, 15%);
+        color: white;
+        font-family: 'Space Mono', monospace;
+    }
+    #tipcustom{
+        width: 28vw;
+    }
+    #tipcustom:placeholder-shown{
+        text-align: center;
+    }
+}
