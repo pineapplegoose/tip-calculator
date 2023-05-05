@@ -9,6 +9,9 @@ The tip calculator accepts the bill amount entered by the user, the user is then
 - Flags user if wrong input type i.e letters etc is entered.
 - Is mobile responsive.
 
-That's basically all it does 😄.
 
+
+
+
+That's basically all it does 😄.
 For any inquiries or issues please let me know 👍
